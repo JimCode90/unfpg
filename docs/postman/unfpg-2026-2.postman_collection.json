@@ -2588,6 +2588,684 @@
           "response": []
         }
       ]
+    },
+    {
+      "name": "docente",
+      "item": [
+        {
+          "name": "findAll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/docente",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "docente"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/docente/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "docente",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/docente/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "docente",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Carlos Alberto\",\n    \"apellidopaterno\": \"Quispe\",\n    \"apellidomaterno\": \"Huamán\",\n    \"fechanacimiento\": \"1985-04-20\",\n    \"numerodocumento\": \"{{$timestamp}}\",\n    \"lugarnacimiento\": \"Peruana\",\n    \"direccion\": \"Av. Arequipa 1500 - Lima\",\n    \"telefono\": \"014800001\",\n    \"celular\": \"930400001\",\n    \"correo\": \"docente{{$timestamp}}@unfpg.edu.pe\",\n    \"sueldo\": 4300.0,\n    \"estado\": true,\n    \"distrito\": {\n        \"codigo\": 15,\n        \"nombre\": \"Lima\",\n        \"estado\": true\n    },\n    \"sexo\": {\n        \"codigo\": 1,\n        \"nombre\": \"Masculino\",\n        \"estado\": true\n    },\n    \"tipodocumento\": {\n        \"codigo\": 1,\n        \"nombre\": \"DNI\",\n        \"estado\": true\n    },\n    \"estadocivil\": {\n        \"codigo\": 1,\n        \"nombre\": \"Soltero(a)\",\n        \"estado\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/docente",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "docente"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"coddocente\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": {{coddocente}},\n    \"nombre\": \"Carlos Andrés\",\n    \"apellidopaterno\": \"Quispe\",\n    \"apellidomaterno\": \"Huamán\",\n    \"fechanacimiento\": \"1985-04-20\",\n    \"numerodocumento\": \"{{$timestamp}}\",\n    \"lugarnacimiento\": \"Peruana\",\n    \"direccion\": \"Av. Brasil 2300 - Pueblo Libre\",\n    \"telefono\": \"014800001\",\n    \"celular\": \"930400099\",\n    \"correo\": \"docente{{$timestamp}}@unfpg.edu.pe\",\n    \"sueldo\": 4650.0,\n    \"estado\": true,\n    \"distrito\": {\n        \"codigo\": 15,\n        \"nombre\": \"Lima\",\n        \"estado\": true\n    },\n    \"sexo\": {\n        \"codigo\": 1,\n        \"nombre\": \"Masculino\",\n        \"estado\": true\n    },\n    \"tipodocumento\": {\n        \"codigo\": 1,\n        \"nombre\": \"DNI\",\n        \"estado\": true\n    },\n    \"estadocivil\": {\n        \"codigo\": 2,\n        \"nombre\": \"Casado(a)\",\n        \"estado\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/docente/{{coddocente}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "docente",
+                "{{coddocente}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/docente/{{coddocente}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "docente",
+                "{{coddocente}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/docente/{{coddocente}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "docente",
+                "{{coddocente}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "empleado",
+      "item": [
+        {
+          "name": "findAll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/empleado",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "empleado"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/empleado/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "empleado",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/empleado/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "empleado",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Carlos Alberto\",\n    \"apellidopaterno\": \"Quispe\",\n    \"apellidomaterno\": \"Huamán\",\n    \"fechanacimiento\": \"1985-04-20\",\n    \"numerodocumento\": \"{{$timestamp}}\",\n    \"lugarnacimiento\": \"Peruana\",\n    \"direccion\": \"Av. Arequipa 1500 - Lima\",\n    \"telefono\": \"014800001\",\n    \"celular\": \"930400001\",\n    \"correo\": \"empleado{{$timestamp}}@unfpg.edu.pe\",\n    \"sueldo\": 4300.0,\n    \"estado\": true,\n    \"areaempleo\": {\n        \"codigo\": 5,\n        \"nombre\": \"Tecnologías de Información\",\n        \"estado\": true\n    },\n    \"cargo\": {\n        \"codigo\": 5,\n        \"nombre\": \"Analista de Sistemas\",\n        \"estado\": true\n    },\n    \"distrito\": {\n        \"codigo\": 15,\n        \"nombre\": \"Lima\",\n        \"estado\": true\n    },\n    \"sexo\": {\n        \"codigo\": 1,\n        \"nombre\": \"Masculino\",\n        \"estado\": true\n    },\n    \"tipodocumento\": {\n        \"codigo\": 1,\n        \"nombre\": \"DNI\",\n        \"estado\": true\n    },\n    \"estadocivil\": {\n        \"codigo\": 1,\n        \"nombre\": \"Soltero(a)\",\n        \"estado\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/empleado",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "empleado"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codempleado\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": {{codempleado}},\n    \"nombre\": \"Carlos Andrés\",\n    \"apellidopaterno\": \"Quispe\",\n    \"apellidomaterno\": \"Huamán\",\n    \"fechanacimiento\": \"1985-04-20\",\n    \"numerodocumento\": \"{{$timestamp}}\",\n    \"lugarnacimiento\": \"Peruana\",\n    \"direccion\": \"Av. Brasil 2300 - Pueblo Libre\",\n    \"telefono\": \"014800001\",\n    \"celular\": \"930400099\",\n    \"correo\": \"empleado{{$timestamp}}@unfpg.edu.pe\",\n    \"sueldo\": 4650.0,\n    \"estado\": true,\n    \"areaempleo\": {\n        \"codigo\": 1,\n        \"nombre\": \"Administración\",\n        \"estado\": true\n    },\n    \"cargo\": {\n        \"codigo\": 6,\n        \"nombre\": \"Asistente Administrativo\",\n        \"estado\": true\n    },\n    \"distrito\": {\n        \"codigo\": 15,\n        \"nombre\": \"Lima\",\n        \"estado\": true\n    },\n    \"sexo\": {\n        \"codigo\": 1,\n        \"nombre\": \"Masculino\",\n        \"estado\": true\n    },\n    \"tipodocumento\": {\n        \"codigo\": 1,\n        \"nombre\": \"DNI\",\n        \"estado\": true\n    },\n    \"estadocivil\": {\n        \"codigo\": 2,\n        \"nombre\": \"Casado(a)\",\n        \"estado\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/empleado/{{codempleado}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "empleado",
+                "{{codempleado}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/empleado/{{codempleado}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "empleado",
+                "{{codempleado}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/empleado/{{codempleado}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "empleado",
+                "{{codempleado}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "usuario",
+      "item": [
+        {
+          "name": "findAll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/usuario",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "usuario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/usuario/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "usuario",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/usuario/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "usuario",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"usu{{$timestamp}}\",\n    \"clave\": \"hash_usuario_prueba\",\n    \"correo\": \"usu{{$timestamp}}@unfpg.edu.pe\",\n    \"estado\": true,\n    \"alumno\": {\n        \"codigo\": 1\n    },\n    \"docente\": null,\n    \"empleado\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/usuario",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "usuario"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codusuario\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": {{codusuario}},\n    \"nombre\": \"usued{{$timestamp}}\",\n    \"clave\": \"hash_usuario_editado\",\n    \"correo\": \"usued{{$timestamp}}@unfpg.edu.pe\",\n    \"estado\": true,\n    \"alumno\": {\n        \"codigo\": 1\n    },\n    \"docente\": null,\n    \"empleado\": null\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/usuario/{{codusuario}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "usuario",
+                "{{codusuario}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/usuario/{{codusuario}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "usuario",
+                "{{codusuario}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/usuario/{{codusuario}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "usuario",
+                "{{codusuario}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "aula",
+      "item": [
+        {
+          "name": "findAll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/aula",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "aula"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/aula/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "aula",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"LAB-{{$randomInt}}\",\n    \"capacidad\": 30,\n    \"ubicacion\": {\n        \"codigo\": 3,\n        \"nombre\": \"Pabellón B - Primer Piso\",\n        \"descripcion\": \"Laboratorios de cómputo\",\n        \"estado\": true\n    },\n    \"tipoaula\": {\n        \"codigo\": 2,\n        \"nombre\": \"Laboratorio de Cómputo\",\n        \"estado\": true\n    },\n    \"estadoaula\": {\n        \"codigo\": 1,\n        \"nombre\": \"Disponible\",\n        \"estado\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/aula",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "aula"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codaula\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": {{codaula}},\n    \"nombre\": \"LAB-ED-{{$randomInt}}\",\n    \"capacidad\": 35,\n    \"ubicacion\": {\n        \"codigo\": 3,\n        \"nombre\": \"Pabellón B - Primer Piso\",\n        \"descripcion\": \"Laboratorios de cómputo\",\n        \"estado\": true\n    },\n    \"tipoaula\": {\n        \"codigo\": 3,\n        \"nombre\": \"Laboratorio Especializado\",\n        \"estado\": true\n    },\n    \"estadoaula\": {\n        \"codigo\": 3,\n        \"nombre\": \"Mantenimiento\",\n        \"estado\": true\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/aula/{{codaula}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "aula",
+                "{{codaula}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
