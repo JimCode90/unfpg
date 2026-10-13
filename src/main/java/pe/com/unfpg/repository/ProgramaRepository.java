@@ -1,0 +1,14 @@
+package pe.com.unfpg.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import pe.com.unfpg.entity.ProgramaEntity;
+
+import java.util.List;
+
+public interface ProgramaRepository extends JpaRepository<ProgramaEntity, Long> {
+
+    @Query("select p from ProgramaEntity p where p.estado=true")
+    List<ProgramaEntity> findAllCustom();
+
+}
