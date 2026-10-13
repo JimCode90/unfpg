@@ -11,6 +11,7 @@ Lee los archivos en este orden. Cada uno es corto y tiene un solo tema.
 | 5 | [05-crear-pull-request.md](05-crear-pull-request.md) | Cómo pedir que revisen tu trabajo |
 | 6 | [06-revisar-y-aprobar.md](06-revisar-y-aprobar.md) | Para el líder: revisar, aprobar y hacer merge |
 | 7 | [07-problemas-comunes.md](07-problemas-comunes.md) | Errores típicos y cómo salir de ellos |
+| 8 | [08-usar-skill-flujo-github.md](08-usar-skill-flujo-github.md) | Hacer rama, commits y PR con Claude Code |
 
 ## Resumen del flujo en una línea
 
