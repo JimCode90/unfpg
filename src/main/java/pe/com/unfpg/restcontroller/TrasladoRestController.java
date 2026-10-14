@@ -1,0 +1,51 @@
+package pe.com.unfpg.restcontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import pe.com.unfpg.entity.TrasladoEntity;
+import pe.com.unfpg.service.TrasladoService;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/traslado")
+public class TrasladoRestController {
+    @Autowired
+    private TrasladoService servicio;
+
+    @GetMapping
+    public List<TrasladoEntity> findAll(){
+        return servicio.findAll();
+    }
+
+    @GetMapping("/custom")
+    public List<TrasladoEntity> findAllCustom(){
+        return servicio.findAllCustom();
+    }
+
+    @GetMapping("/{id}")
+    public TrasladoEntity findById(@PathVariable Long id) {
+        return servicio.findById(id);
+    }
+
+    @PostMapping
+    public TrasladoEntity add(@RequestBody TrasladoEntity obj) {
+        return servicio.add(obj);
+    }
+
+    @PutMapping("/{id}")
+    public TrasladoEntity update(@RequestBody TrasladoEntity obj,
+                               @PathVariable Long id) {
+        return servicio.update(obj, id);
+    }
+
+    @DeleteMapping("/{id}")
+    public TrasladoEntity delete(@PathVariable Long id) {
+        return servicio.delete(id);
+    }
+
+    @PatchMapping("/{id}")
+    public TrasladoEntity enable(@PathVariable Long id) {
+        return servicio.enable(id);
+    }
+}
