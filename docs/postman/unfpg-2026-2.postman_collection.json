@@ -1,12 +1,3078 @@
 {
   "info": {
-    "_postman_id": "e850426c-fcd4-43b8-bb99-b4c1b2112417",
+    "_postman_id": "9ef1a347-0a33-4b89-9711-500e4074231f",
     "name": "unfpg-2026-2",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "8242825",
-    "_collection_link": "https://go.postman.co/collection/8242825-e850426c-fcd4-43b8-bb99-b4c1b2112417?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/8242825-9ef1a347-0a33-4b89-9711-500e4074231f?source=collection_link"
   },
   "item": [
+    {
+      "name": "seccion",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/seccion",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "seccion"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/seccion/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "seccion",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"capacidad\": 25,\n    \"curso\": {\"codigo\": 1},\n    \"docente\": {\"codigo\": 1},\n    \"periodoacademico\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/seccion",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "seccion"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 14,\n    \"capacidad\": 50,\n    \"curso\": {\"codigo\": 1},\n    \"docente\": {\"codigo\": 1},\n    \"periodoacademico\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/seccion/14",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "seccion",
+                "14"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "horario",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/horario",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "horario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/horario/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "horario",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"bloque\": {\"codigo\": 1},\n    \"seccion\": {\"codigo\": 1},\n    \"diasemana\": {\"codigo\": 5},\n    \"aula\": {\"codigo\": 6}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/horario",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "horario"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 15,\n    \"bloque\": {\"codigo\":1},\n    \"seccion\": {\"codigo\": 2},\n    \"diasemana\": {\"codigo\": 5},\n    \"aula\": {\"codigo\": 6}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/horario/15",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "horario",
+                "15"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "matricula",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matricula",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matricula"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matricula/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matricula",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matricula/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matricula",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"observacion\": \"Prueba matricula 02\",\n    \"fechamatricula\": \"2026-10-13T10:00:00\",\n    \"estado\": true,\n    \"alumno\": {\"codigo\": 14},\n    \"estadomatricula\": {\"codigo\": 1},\n    \"tipomatricula\": {\"codigo\": 1},\n    \"periodoacademico\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matricula",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matricula"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 16,\n    \"observacion\": \"Prueba matricula update 01\",\n    \"fechamatricula\": \"2026-10-13T10:00:00\",\n    \"estado\": true,\n    \"alumno\": {\"codigo\": 14},\n    \"estadomatricula\": {\"codigo\": 1},\n    \"tipomatricula\": {\"codigo\": 1},\n    \"periodoacademico\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matricula/16",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matricula",
+                "16"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matricula/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matricula",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matricula/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matricula",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "detallematricula",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/detallematricula",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "detallematricula"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/detallematricula/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "detallematricula",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/detallematricula/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "detallematricula",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"estado\": true,\n    \"matricula\": {\"codigo\": 1},\n    \"seccion\": {\"codigo\": 3}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/detallematricula",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "detallematricula"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 21,\n    \"estado\": true,\n    \"matricula\": {\"codigo\": 1},\n    \"seccion\": {\"codigo\": 3}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/detallematricula/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "detallematricula",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/detallematricula/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "detallematricula",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/detallematricula/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "detallematricula",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "traslado",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/traslado",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "traslado"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/traslado/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "traslado",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/traslado/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "traslado",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"programaorigen\": \"Programa de prueba 01\",\n    \"universidadorigen\": \"Universidad de prueba 01\",\n    \"estado\": true,\n    \"matricula\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/traslado",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "traslado"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 3,\n    \"programaorigen\": \"Programa de prueba update 01\",\n    \"universidadorigen\": \"Universidad de prueba update 01\",\n    \"estado\": true,\n    \"matricula\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/traslado/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "traslado",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/traslado/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "traslado",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/traslado/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "traslado",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "calificacion",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/calificacion",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "calificacion"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/calificacion/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "calificacion",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fechacalificacion\": \"2026-10-13T10:00:00\",\n    \"nota\": 15.5,\n    \"detallematricula\": {\"codigo\": 1},\n    \"seccion\": {\"codigo\": 1},\n    \"tipocalificacion\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/calificacion",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "calificacion"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 41,\n    \"fechacalificacion\": \"2026-10-13T10:00:00\",\n    \"nota\": 18.0,\n    \"detallematricula\": {\"codigo\": 1},\n    \"seccion\": {\"codigo\": 1},\n    \"tipocalificacion\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/calificacion/41",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "calificacion",
+                "41"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "asistencia",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/asistencia",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "asistencia"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/asistencia/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "asistencia",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fechaasistencia\": \"2026-10-13T08:00:00\",\n    \"presente\": true,\n    \"justificada\": false,\n    \"detallematricula\": {\"codigo\": 1},\n    \"seccion\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/asistencia",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "asistencia"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 61,\n    \"fechaasistencia\": \"2026-10-13T08:00:00\",\n    \"presente\": false,\n    \"justificada\": true,\n    \"detallematricula\": {\"codigo\": 1},\n    \"seccion\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/asistencia/61",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "asistencia",
+                "61"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ordenpago",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ordenpago",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ordenpago"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ordenpago/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ordenpago",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ordenpago/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ordenpago",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fechaordenpago\": \"2026-10-13T10:00:00\",\n    \"monto\": 350.00,\n    \"estado\": true,\n    \"matricula\": {\"codigo\": 1},\n    \"conceptopago\": {\"codigo\": 1},\n    \"metodopago\": {\"codigo\": 1},\n    \"estadopago\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ordenpago",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ordenpago"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 21,\n    \"fechaordenpago\": \"2026-10-13T10:00:00\",\n    \"monto\": 400.00,\n    \"estado\": true,\n    \"matricula\": {\"codigo\": 1},\n    \"conceptopago\": {\"codigo\": 1},\n    \"metodopago\": {\"codigo\": 1},\n    \"estadopago\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ordenpago/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ordenpago",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ordenpago/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ordenpago",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ordenpago/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ordenpago",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "pago",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/pago",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "pago"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/pago/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "pago",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/pago/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "pago",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fechapago\": \"2026-10-13T11:00:00\",\n    \"monto\": 350.00,\n    \"estado\": true,\n    \"ordenpago\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/pago",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "pago"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 21,\n    \"fechapago\": \"2026-10-13T11:00:00\",\n    \"monto\": 300.00,\n    \"estado\": true,\n    \"ordenpago\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/pago/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "pago",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/pago/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "pago",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/pago/21",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "pago",
+                "21"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ejemplarlibro",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ejemplarlibro",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ejemplarlibro"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ejemplarlibro/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ejemplarlibro",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ejemplarlibro/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ejemplarlibro",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigoejemplar\": \"EJEMPLODEMO\",\n    \"disponibilidad\": \"DISPONIBLE\",\n    \"estado\": true,\n    \"libro\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ejemplarlibro",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ejemplarlibro"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 17,\n    \"codigoejemplar\": \"EJEMPLODEMO-UPD\",\n    \"disponibilidad\": \"MANTENIMIENTO\",\n    \"estado\": true,\n    \"libro\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ejemplarlibro/17",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ejemplarlibro",
+                "17"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ejemplarlibro/17",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ejemplarlibro",
+                "17"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/ejemplarlibro/17",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "ejemplarlibro",
+                "17"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "prestamolibro",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/prestamolibro",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "prestamolibro"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/prestamolibro/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "prestamolibro",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/prestamolibro/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "prestamolibro",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fechaprestamo\": \"2026-10-13\",\n    \"fechadevolucion\": null,\n    \"devuelto\": false,\n    \"estado\": true,\n    \"alumno\": {\"codigo\": 1},\n    \"ejemplarlibro\": {\"codigo\": 1},\n    \"estadoprestamolibro\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/prestamolibro",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "prestamolibro"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 7,\n    \"fechaprestamo\": \"2026-10-13\",\n    \"fechadevolucion\": \"2026-10-20\",\n    \"devuelto\": true,\n    \"estado\": true,\n    \"alumno\": {\"codigo\": 1},\n    \"ejemplarlibro\": {\"codigo\": 1},\n    \"estadoprestamolibro\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/prestamolibro/7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "prestamolibro",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/prestamolibro/7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "prestamolibro",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/prestamolibro/7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "prestamolibro",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "cursolms",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/cursolms",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "cursolms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/cursolms/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "cursolms",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/cursolms/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "cursolms",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"estado\": true,\n    \"planestudio\": {\"codigo\": 1},\n    \"seccion\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/cursolms",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "cursolms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 11,\n    \"estado\": true,\n    \"planestudio\": {\"codigo\": 2},\n    \"seccion\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/cursolms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "cursolms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/cursolms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "cursolms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/cursolms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "cursolms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "evaluacionlms",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/evaluacionlms",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "evaluacionlms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/evaluacionlms/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "evaluacionlms",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/evaluacionlms/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "evaluacionlms",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Examen parcial de prueba 01\",\n    \"descripcion\": \"Evaluacion de prueba\",\n    \"fechaevaluacion\": \"2026-10-20T10:00:00\",\n    \"estado\": true,\n    \"cursolms\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/evaluacionlms",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "evaluacionlms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 11,\n    \"nombre\": \"Examen parcial de prueba update 01\",\n    \"descripcion\": \"Evaluacion actualizada\",\n    \"fechaevaluacion\": \"2026-10-21T10:00:00\",\n    \"estado\": true,\n    \"cursolms\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/evaluacionlms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "evaluacionlms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/evaluacionlms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "evaluacionlms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/evaluacionlms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "evaluacionlms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "matriculalms",
+      "item": [
+        {
+          "name": "findAll",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matriculalms",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matriculalms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findAllCustom",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matriculalms/custom",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matriculalms",
+                "custom"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "findById",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matriculalms/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matriculalms",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fechamatricula\": \"2026-10-13T10:00:00\",\n    \"estado\": true,\n    \"alumno\": {\"codigo\": 11},\n    \"cursolms\": {\"codigo\": 1},\n    \"rollms\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matriculalms",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matriculalms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"codigo\": 11,\n    \"fechamatricula\": \"2026-10-14T10:00:00\",\n    \"estado\": true,\n    \"alumno\": {\"codigo\": 11},\n    \"cursolms\": {\"codigo\": 1},\n    \"rollms\": {\"codigo\": 1}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matriculalms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matriculalms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matriculalms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matriculalms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enable",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/unfpg/api/matriculalms/11",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "unfpg",
+                "api",
+                "matriculalms",
+                "11"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
     {
       "name": "distrito",
       "item": [
@@ -257,7 +3323,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"nombre\": \"Jimmy Niels\",\n    \"apellidopaterno\": \"Paytan\",\n    \"apellidomaterno\": \"Villavicencio\",\n    \"fechanacimiento\": \"1990-01-10\",\n    \"numerodocumento\": \"46292623\",\n    \"lugarnacimiento\": \"Peruana\",\n    \"direccion\": \"Av. Los Próceres 123 - San Juan de Lurigancho\",\n    \"telefono\": \"014500001\",\n    \"celular\": \"922868264\",\n    \"correo\": \"jimmypaytan@unfpg.edu.pe\",\n    \"estado\": true,\n    \"distrito\": {\n        \"codigo\": 32,\n        \"nombre\": \"San Juan de Lurigancho\",\n        \"estado\": true\n    },\n    \"sexo\": {\n        \"codigo\": 1,\n        \"nombre\": \"Masculino\",\n        \"estado\": true\n    },\n    \"tipodocumento\": {\n        \"codigo\": 1,\n        \"nombre\": \"DNI\",\n        \"estado\": true\n    },\n    \"estadocivil\": {\n        \"codigo\": 1,\n        \"nombre\": \"Soltero(a)\",\n        \"estado\": true\n    }\n}",
+              "raw": "{\n    \"nombre\": \"Jorge\",\n    \"apellidopaterno\": \"Paytan\",\n    \"apellidomaterno\": \"Villavicencio\",\n    \"fechanacimiento\": \"1990-01-10\",\n    \"numerodocumento\": \"46292621\",\n    \"lugarnacimiento\": \"Peruana\",\n    \"direccion\": \"Av. Los Próceres 123 - San Juan de Lurigancho\",\n    \"telefono\": \"014500001\",\n    \"celular\": \"922868264\",\n    \"correo\": \"jorgepaytan@unfpg.edu.pe\",\n    \"estado\": true,\n    \"distrito\": {\n        \"codigo\": 32,\n        \"nombre\": \"San Juan de Lurigancho\",\n        \"estado\": true\n    },\n    \"sexo\": {\n        \"codigo\": 1,\n        \"nombre\": \"Masculino\",\n        \"estado\": true\n    },\n    \"tipodocumento\": {\n        \"codigo\": 1,\n        \"nombre\": \"DNI\",\n        \"estado\": true\n    },\n    \"estadocivil\": {\n        \"codigo\": 1,\n        \"nombre\": \"Soltero(a)\",\n        \"estado\": true\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -427,6 +3493,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codsexo\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -453,17 +3530,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codsexo\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -613,6 +3679,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codtipodocumento\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -639,17 +3716,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codtipodocumento\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -799,6 +3865,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codestadocivil\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -825,17 +3902,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codestadocivil\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -985,6 +4051,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codareaempleo\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -1011,17 +4088,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codareaempleo\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -1171,6 +4237,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codcargo\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -1197,17 +4274,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codcargo\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -1357,6 +4423,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codtipoaula\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -1383,17 +4460,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codtipoaula\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -1543,6 +4609,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codubicacion\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -1569,17 +4646,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codubicacion\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -1729,6 +4795,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codestadoaula\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -1755,17 +4832,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codestadoaula\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -1915,6 +4981,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codgradoinstruccion\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -1941,17 +5018,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codgradoinstruccion\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -2101,6 +5167,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codrol\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -2127,17 +5204,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codrol\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -2287,6 +5353,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"coddiasemana\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -2313,17 +5390,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"coddiasemana\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -2473,6 +5539,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codbloque\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -2499,17 +5576,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codbloque\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -2659,6 +5725,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"coddocente\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -2685,17 +5762,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"coddocente\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -2845,6 +5911,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codempleado\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -2871,17 +5948,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codempleado\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -3031,6 +6097,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codusuario\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -3057,17 +6134,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codusuario\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
@@ -3195,6 +6261,17 @@
         },
         {
           "name": "add",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"codaula\", pm.response.json().codigo);"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [],
@@ -3221,17 +6298,6 @@
               ]
             }
           },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.collectionVariables.set(\"codaula\", pm.response.json().codigo);"
-                ]
-              }
-            }
-          ],
           "response": []
         },
         {
