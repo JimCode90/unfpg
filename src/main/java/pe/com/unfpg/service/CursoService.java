@@ -10,5 +10,5 @@ public interface CursoService {
     CursoEntity findById(Long id);
     CursoEntity add(CursoEntity obj);
     CursoEntity update(CursoEntity obj, Long id);
-
+    CursoEntity delete(Long id);
 }
