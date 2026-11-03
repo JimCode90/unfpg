@@ -33,4 +33,9 @@ public class CalificacionRestController {
                                      @PathVariable Long id) {
         return servicio.update(obj, id);
     }
+
+    @DeleteMapping("/{id}")
+    public CalificacionEntity delete(@PathVariable Long id) {
+        return servicio.delete(id);
+    }
 }

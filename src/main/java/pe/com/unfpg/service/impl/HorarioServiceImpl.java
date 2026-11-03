@@ -34,4 +34,10 @@ public class HorarioServiceImpl implements HorarioService {
         BeanUtils.copyProperties(obj, objhor);
         return repositorio.save(objhor);
     }
+    @Override
+    public HorarioEntity delete(Long id) {
+        HorarioEntity obj=repositorio.findById(id).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }

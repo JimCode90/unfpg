@@ -34,4 +34,10 @@ public class CalificacionServiceImpl implements CalificacionService {
         BeanUtils.copyProperties(obj, objcal);
         return repositorio.save(objcal);
     }
+    @Override
+    public CalificacionEntity delete(Long id) {
+        CalificacionEntity obj=repositorio.findById(id).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }

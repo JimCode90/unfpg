@@ -34,4 +34,10 @@ public class AulaServiceImpl implements AulaService {
         BeanUtils.copyProperties(obj, objaul);
         return repositorio.save(objaul);
     }
+    @Override
+    public AulaEntity delete(Long id) {
+        AulaEntity obj=repositorio.findById(id).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }

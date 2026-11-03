@@ -33,4 +33,9 @@ public class HorarioRestController {
                                @PathVariable Long id) {
         return servicio.update(obj, id);
     }
+
+    @DeleteMapping("/{id}")
+    public HorarioEntity delete(@PathVariable Long id) {
+        return servicio.delete(id);
+    }
 }

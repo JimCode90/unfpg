@@ -10,4 +10,5 @@ public interface CalificacionService {
     CalificacionEntity findById(Long id);
     CalificacionEntity add(CalificacionEntity obj);
     CalificacionEntity update(CalificacionEntity obj, Long id);
+    CalificacionEntity delete(Long id);
 }

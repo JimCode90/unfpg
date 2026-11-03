@@ -10,4 +10,5 @@ public interface AsistenciaService {
     AsistenciaEntity findById(Long id);
     AsistenciaEntity add(AsistenciaEntity obj);
     AsistenciaEntity update(AsistenciaEntity obj, Long id);
+    AsistenciaEntity delete(Long id);
 }
