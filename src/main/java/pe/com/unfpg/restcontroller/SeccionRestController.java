@@ -33,4 +33,9 @@ public class SeccionRestController {
                                @PathVariable Long id) {
         return servicio.update(obj, id);
     }
+
+    @DeleteMapping("/{id}")
+    public SeccionEntity delete(@PathVariable Long id) {
+        return servicio.delete(id);
+    }
 }

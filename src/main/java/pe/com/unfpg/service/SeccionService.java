@@ -10,4 +10,5 @@ public interface SeccionService {
     SeccionEntity findById(Long id);
     SeccionEntity add(SeccionEntity obj);
     SeccionEntity update(SeccionEntity obj, Long id);
+    SeccionEntity delete(Long id);
 }
