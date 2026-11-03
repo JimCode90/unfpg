@@ -10,4 +10,5 @@ public interface HorarioService {
     HorarioEntity findById(Long id);
     HorarioEntity add(HorarioEntity obj);
     HorarioEntity update(HorarioEntity obj, Long id);
+    HorarioEntity delete(Long id);
 }
