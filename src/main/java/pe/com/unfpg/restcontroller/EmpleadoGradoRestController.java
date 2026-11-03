@@ -33,4 +33,9 @@ public class EmpleadoGradoRestController {
                                @PathVariable Long codemp, @PathVariable Long codgrai) {
         return servicio.update(obj, codemp, codgrai);
     }
+
+    @DeleteMapping("/{codemp}/{codgrai}")
+    public EmpleadoGradoEntity delete(@PathVariable Long codemp, @PathVariable Long codgrai) {
+        return servicio.delete(codemp, codgrai);
+    }
 }

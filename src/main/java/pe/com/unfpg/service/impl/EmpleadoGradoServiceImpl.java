@@ -35,4 +35,10 @@ public class EmpleadoGradoServiceImpl implements EmpleadoGradoService {
         BeanUtils.copyProperties(obj, objegr, "id", "empleado", "gradoinstruccion");
         return repositorio.save(objegr);
     }
+    @Override
+    public EmpleadoGradoEntity delete(Long codemp, Long codgrai) {
+        EmpleadoGradoEntity obj=repositorio.findById(new EmpleadoGradoId(codemp, codgrai)).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }
