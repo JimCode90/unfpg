@@ -34,4 +34,9 @@ public class CursoRestController {
                               @PathVariable Long id) {
         return servicio.update(obj, id);
     }
+
+    @DeleteMapping("/{id}")
+    public CursoEntity delete(@PathVariable Long id) {
+        return servicio.delete(id);
+    }
 }

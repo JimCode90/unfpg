@@ -34,4 +34,10 @@ public class AsistenciaServiceImpl implements AsistenciaService {
         BeanUtils.copyProperties(obj, objasi);
         return repositorio.save(objasi);
     }
+    @Override
+    public AsistenciaEntity delete(Long id) {
+        AsistenciaEntity obj=repositorio.findById(id).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }

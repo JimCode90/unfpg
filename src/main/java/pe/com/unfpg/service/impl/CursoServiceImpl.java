@@ -35,5 +35,10 @@ public class CursoServiceImpl implements CursoService {
         BeanUtils.copyProperties(obj, objcur);
         return repositorio.save(objcur);
     }
-
+    @Override
+    public CursoEntity delete(Long id) {
+        CursoEntity obj=repositorio.findById(id).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }

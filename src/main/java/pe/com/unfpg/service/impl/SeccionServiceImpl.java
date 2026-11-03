@@ -34,4 +34,10 @@ public class SeccionServiceImpl implements SeccionService {
         BeanUtils.copyProperties(obj, objsec);
         return repositorio.save(objsec);
     }
+    @Override
+    public SeccionEntity delete(Long id) {
+        SeccionEntity obj=repositorio.findById(id).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }
