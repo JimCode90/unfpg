@@ -33,4 +33,9 @@ public class AsistenciaRestController {
                                    @PathVariable Long id) {
         return servicio.update(obj, id);
     }
+
+    @DeleteMapping("/{id}")
+    public AsistenciaEntity delete(@PathVariable Long id) {
+        return servicio.delete(id);
+    }
 }
