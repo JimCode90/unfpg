@@ -33,4 +33,9 @@ public class DocenteGradoRestController {
                                @PathVariable Long coddoc, @PathVariable Long codgrai) {
         return servicio.update(obj, coddoc, codgrai);
     }
+
+    @DeleteMapping("/{coddoc}/{codgrai}")
+    public DocenteGradoEntity delete(@PathVariable Long coddoc, @PathVariable Long codgrai) {
+        return servicio.delete(coddoc, codgrai);
+    }
 }

@@ -35,4 +35,10 @@ public class DocenteGradoServiceImpl implements DocenteGradoService {
         BeanUtils.copyProperties(obj, objdgr, "id", "docente", "gradoinstruccion");
         return repositorio.save(objdgr);
     }
+    @Override
+    public DocenteGradoEntity delete(Long coddoc, Long codgrai) {
+        DocenteGradoEntity obj=repositorio.findById(new DocenteGradoId(coddoc, codgrai)).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }
