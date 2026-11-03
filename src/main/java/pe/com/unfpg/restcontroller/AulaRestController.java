@@ -32,4 +32,9 @@ public class AulaRestController {
     public AulaEntity update(@RequestBody AulaEntity obj, @PathVariable Long id) {
         return servicio.update(obj, id);
     }
+
+    @DeleteMapping("/{id}")
+    public AulaEntity delete(@PathVariable Long id) {
+        return servicio.delete(id);
+    }
 }

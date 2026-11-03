@@ -10,4 +10,5 @@ public interface AulaService {
     AulaEntity findById(Long id);
     AulaEntity add(AulaEntity obj);
     AulaEntity update(AulaEntity obj, Long id);
+    AulaEntity delete(Long id);
 }
