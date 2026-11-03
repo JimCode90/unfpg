@@ -10,4 +10,5 @@ public interface EmpleadoGradoService {
     EmpleadoGradoEntity findById(Long codemp, Long codgrai);
     EmpleadoGradoEntity add(EmpleadoGradoEntity obj);
     EmpleadoGradoEntity update(EmpleadoGradoEntity obj, Long codemp, Long codgrai);
+    EmpleadoGradoEntity delete(Long codemp, Long codgrai);
 }

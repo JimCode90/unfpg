@@ -28,4 +28,10 @@ public class UsuarioRolServiceImpl implements UsuarioRolService {
     public UsuarioRolEntity add(UsuarioRolEntity obj) {
         return repositorio.save(obj);
     }
+    @Override
+    public UsuarioRolEntity delete(Long codusu, Long codrol) {
+        UsuarioRolEntity obj=repositorio.findById(new UsuarioRolId(codusu, codrol)).get();
+        repositorio.delete(obj);
+        return obj;
+    }
 }

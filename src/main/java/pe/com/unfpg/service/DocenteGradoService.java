@@ -10,4 +10,5 @@ public interface DocenteGradoService {
     DocenteGradoEntity findById(Long coddoc, Long codgrai);
     DocenteGradoEntity add(DocenteGradoEntity obj);
     DocenteGradoEntity update(DocenteGradoEntity obj, Long coddoc, Long codgrai);
+    DocenteGradoEntity delete(Long coddoc, Long codgrai);
 }

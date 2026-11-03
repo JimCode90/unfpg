@@ -27,4 +27,9 @@ public class UsuarioRolRestController {
     public UsuarioRolEntity add(@RequestBody UsuarioRolEntity obj) {
         return servicio.add(obj);
     }
+
+    @DeleteMapping("/{codusu}/{codrol}")
+    public UsuarioRolEntity delete(@PathVariable Long codusu, @PathVariable Long codrol) {
+        return servicio.delete(codusu, codrol);
+    }
 }
